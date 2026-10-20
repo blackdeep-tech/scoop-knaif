@@ -16,12 +16,12 @@ against its sha256, and puts its `bin` folder on your PATH, as the knaif install
 installed with it, because the ffmpeg skill cannot run without it; Scoop suggests the optional
 tools of the documents skill.
 
-**Smart App Control.** With it enforcing, Windows blocks the 7-Zip that Scoop unpacks FFmpeg with,
-so the install stops at FFmpeg. Install knaif alone instead; the documents skill works, the ffmpeg
-skill needs an FFmpeg that Windows allows:
+**Smart App Control.** With it enforcing, Windows blocks the 7-Zip that Scoop unpacks FFmpeg (and
+Git) with, so the install stops at FFmpeg. Install knaif alone, straight from the manifest, which
+needs no Git; the documents skill works, the ffmpeg skill needs an FFmpeg that Windows allows:
 
 ```powershell
-scoop install knaif/knaif --independent
+scoop install https://raw.githubusercontent.com/blackdeep-tech/scoop-knaif/main/bucket/knaif.json --independent
 ```
 
 Update with `scoop update knaif`; uninstalling with `scoop uninstall knaif` keeps your models in
